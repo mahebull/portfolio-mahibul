@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+:root {
+  --white: #ffffff;
+  --c-text: #eee;
+  --cng: #2196f3;
+  --cng: #ff5d56;
+  --cng1: #ffb400;
+  --cng: #fa5b0f;
+  --cng: #72b626;
+}
+.over-f {
+  overflow-x: hidden;
+}
+/**********************************    common css  */
+#prelorder {
+  background: #000 url(../img/preloader.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  background-size: 70%;
+  visibility: visible;
+  animation: prel 1s linear forwards;
+}
+@keyframes prel {
+  100% {
+    visibility: hidden;
+  }
+}
+/***************************     pre lorder  */
+.main {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.main .overlay {
+  background: rgba(24, 24, 24, 0.908);
+  height: 100%;
+}
+/***********************************    left  */
+/*    navbar  */
+.nav-icon {
+  position: absolute;
+}
+.menu {
+  cursor: pointer;
+}
+.menu div {
+  width: 120px;
+  height: 120px;
+  margin: 40px;
+  position: relative;
+  transform: scale(0.5);
+}
+.menu span {
+  background: var(--cng1);
+  width: 100%;
+  height: 10%;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s, width 0.5s;
+}
+.menu .line-1 {
+  transform: translate(-50%, -50px);
+}
+.menu .line-3 {
+  transform: translate(-50%, 40px);
+}
+.openmenu .line-1 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.openmenu .line-3 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.openmenu .line-2 {
+  width: 0;
+}
+
+/*---------------------- nav icon  */
+#nav-bar {
+  position: absolute;
+  top: 140px;
+  left: 65px;
+}
+#nav-bar .navigation {
+  position: relative;
+  width: 70px;
+  height: 0;
+  background: #333;
+  border-radius: 35px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+
+  transition: 0.7s;
+}
+#nav-bar .navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+#nav-bar .navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+#menu2 {
+  transition: 0.4s;
+}
+.menu2 {
+  opacity: 0;
+}
+.menu3 {
+  opacity: 1;
+}
+
+#nav-bar .navigationn ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: var(--cng1);
+  font-weight: 500;
+}
+#nav-bar .navigation ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 75px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 2;
+  color: var(--c-text);
+}
+
+#nav-bar .navigation ul li a .icon i {
+  font-size: 24px;
+  transition: 0.4s;
+}
+#nav-bar .navigation ul li:hover a .icon i {
+  color: var(--cng1);
+}
+#nav-bar .navigation ul li a .title {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  background: rgb(255, 255, 255);
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.6s;
+  box-shadow: 0 5px 15px var(--cng1);
+  opacity: 0;
+  margin-left: 8px;
+  transition: 0.4s;
+}
+#nav-bar .navigation ul li:hover a .title {
+  opacity: 1;
+  transform: translateX(-25psx) translateY(-50%);
+  color: #333;
+}
+#nav-bar .navigation ul li a .title::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  left: -8px;
+  top: 46%;
+  transform: rotate(45deg) translateY(-50%);
+}
+/*    navbar  */
+
+.left .my-img {
+  text-align: right;
+  margin-right: 18px;
+}
+.left .my-img .own-img {
+  border-radius: 50%;
+  max-width: 320px;
+  left: calc(50vw - 360px);
+  top: calc(50vh - 160px);
+  border: 10px solid rgba(255, 255, 255, 0.081);
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+/*************************************    right */
+.right {
+}
+.right .text {
+  text-align: left;
+  width: 550px;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+}
+.right .text h3 {
+  font-weight: 400;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  color: var(--c-text);
+}
+.right .text h1 {
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  margin: 19px 0 10px;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.right .text h1 .type {
+  color: var(--cng1);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.right .text p {
+  margin: 11px 0 23px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: var(--c-text);
+}
+.right .text .buttons a {
+  box-shadow: none !important;
+  border-radius: 26px;
+  font-weight: 500;
+  height: 46px;
+  line-height: 46px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0 33px;
+  outline: none !important;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  border: 0;
+  text-decoration: none;
+  color: var(--cng1);
+}
+.right .text .buttons a i {
+  margin-right: 11px;
+}
+.right .text .buttons a:first-child {
+  margin-right: 25px;
+  background-color: var(--cng1);
+  color: var(--white);
+}
+/* before after start  */
+.right .text .buttons a:first-child::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 102%;
+  left: -25%;
+  width: 0%;
+  background-color: rgb(85, 85, 85);
+  transform: skew(-22deg);
+  transition-duration: 0.6s;
+  z-index: 1;
+}
+.right .text .buttons a:hover::before {
+  width: 180%;
+}
+.right .text .buttons a:hover {
+  color: var(--white);
+}
+.right .text .buttons a span {
+  position: relative;
+  z-index: 2;
+}
+.right .text .buttons a:nth-child(2)::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 102%;
+  left: -25%;
+  width: 0%;
+  background-color: var(--cng1);
+  transform: skew(-22deg);
+  transition-duration: 0.6s;
+  z-index: 1;
+}
+.right .text .buttons a:nth-child(2):hover::before {
+  width: 180%;
+}
+.right .text .buttons a:nth-child(2) {
+  border: 1px solid var(--cng1);
+}
+/* before-after end  */
